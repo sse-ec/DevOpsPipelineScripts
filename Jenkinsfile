@@ -19,14 +19,16 @@ stage("Build")
 {
   bat "${mavenHome}/bin/mvn clean package"  
 }
-/*stage("SonarQubeReoprts")
+ /*
+stage("SonarQubeReoprts")
 {
   bat "${mavenHome}/bin/mvn sonar:sonar"  
-} */
+} 
 stage("UploadArtifactsintoNexus")
 {
   bat "${mavenHome}/bin/mvn deploy"  
 }
+*/
 stage("BuildemailNotification")
 mail bcc: '', body: '''echo "GitHub BranchName ${env.BRANCH_NAME}"
  echo "Jenkins Job Number ${env.BUILD_NUMBER}"
