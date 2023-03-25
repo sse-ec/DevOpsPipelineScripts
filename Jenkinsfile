@@ -7,7 +7,7 @@ node
  echo "Jenkins Url ${env.JENKINS_URL}"
  
  
- properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '5')), parameters([run(filter: 'ALL', name: 'Build Name', projectName: '')]), pipelineTriggers([pollSCM('* * * * *')])])
+ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
  
  def mavenHome = tool name: "maven3.9.0"
  
