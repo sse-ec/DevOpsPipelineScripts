@@ -29,7 +29,8 @@ stage("UploadArtifactsintoNexus")
   bat "${mavenHome}/bin/mvn deploy"  
 }
 */
-stage("BuildemailNotification")
+/*
+ stage("BuildemailNotification")
 mail bcc: '', body: '''echo "GitHub BranchName ${env.BRANCH_NAME}"
  echo "Jenkins Job Number ${env.BUILD_NUMBER}"
  echo "Jenkins Node Name ${env.NODE_NAME}"
@@ -38,5 +39,5 @@ mail bcc: '', body: '''echo "GitHub BranchName ${env.BRANCH_NAME}"
 
 Thanks,
 Chinnappa.''', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'chinna.cpv@yahoo.com'
-
+*/
 }
